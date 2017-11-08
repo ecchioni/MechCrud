@@ -9,6 +9,7 @@ using System.IO;
 
 namespace MechCrud.Controllers
 {
+    [HandleError]
     public class MechController : Controller
     {               
         public static MechList result; 

@@ -16,6 +16,7 @@ namespace MechCrud.Models
         [XmlElement("MechName")]
         public string MechName{ get; set; }
         [XmlElement("Price")]
+        [RegularExpression(@"[\d]")]
         public int Price { get; set; }
         [XmlElement("LA")]
         public string LA { get; set; }
@@ -30,9 +31,13 @@ namespace MechCrud.Models
         [XmlElement("Head")]
         public string Head { get; set; }
         [XmlElement("Armor")]
+        [RegularExpression(@"[\d]")]
         public float Armor { get; set; }
         [XmlElement("Heatsinks")]
+        [RegularExpression(@"[\d]")]
         public int Heatsinks { get; set; }
+        [RegularExpression(@"[\d]")]
+        [Range(20,100, ErrorMessage ="20 to 100 tonnes only!")]
         [XmlElement("Tonnage")]
         public int Tonnage { get; set; }
     }
