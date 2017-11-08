@@ -41,9 +41,7 @@ namespace MechCrud.Controllers
             }
 
             #region Sorting
-            //blah
-            //blah
-            //blah
+                        
             ViewBag.ModelSortParm = sortOrder == "MechModel" ? "model_desc" : "MechModel";
             ViewBag.NameSortParm = sortOrder == "MechName" ? "name_desc" : "MechName";
             ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
