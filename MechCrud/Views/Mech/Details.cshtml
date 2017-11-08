@@ -1,0 +1,119 @@
+﻿@model MechCrud.Models.BattleMech
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BattleMech</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model=>model.Id)
+        </dt>
+        <dd id="id">
+            @Html.DisplayFor(model=>model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MechModel)
+        </dt>
+
+        <dd id="model">
+            @Html.DisplayFor(model => model.MechModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MechName)
+        </dt>
+
+        <dd id="name">
+            @Html.DisplayFor(model => model.MechName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd id="price">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LA)
+        </dt>
+
+        <dd id="leftarm">
+            @Html.DisplayFor(model => model.LA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RA)
+        </dt>
+
+        <dd id="rightarm">
+            @Html.DisplayFor(model => model.RA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LT)
+        </dt>
+
+        <dd id="lefttorso">
+            @Html.DisplayFor(model => model.LT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CT)
+        </dt>
+
+        <dd id="centertorso">
+            @Html.DisplayFor(model => model.CT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RT)
+        </dt>
+
+        <dd id="righttorso">
+            @Html.DisplayFor(model => model.RT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Head)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Head)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Armor)
+        </dt>
+
+        <dd id="armor">
+            @Html.DisplayFor(model => model.Armor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Heatsinks)
+        </dt>
+
+        <dd id="heatsinks">
+            @Html.DisplayFor(model => model.Heatsinks)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model=>model.Tonnage)
+        </dt>
+        <dd id="tonnage">
+            @Html.DisplayFor(model=>model.Tonnage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MechCrud.Models.BattleMech>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Add")
+</p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by Name or Model: @Html.TextBox("SearchString")
+        <input type="submit", value="Search" />
+    </p>
+}
+<div class="table-responsive">
+    <table class="table table-bordered table-condensed table-hover sortable" id="mechtable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.ActionLink(@Html.DisplayNameFor(model => model.MechModel).ToString(), "Index", new { sortOrder = ViewBag.ModelSortParm })
+                </th>
+                <th data-defaultsign="AZ">
+                    @Html.ActionLink(@Html.DisplayNameFor(model => model.MechName).ToString(), "Index", new { sortOrder = ViewBag.NameSortParm })
+                </th>
+                <th>
+                    @Html.ActionLink(@Html.DisplayNameFor(model => model.Tonnage).ToString(), "Index", new { sortOrder = ViewBag.TonnageSortParm }) tonnes
+                </th>
+                <th>
+                    @Html.ActionLink(@Html.DisplayNameFor(model => model.Price).ToString(), "Index", new { sortOrder = ViewBag.PriceSortParm })  C-Bills
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="mech-crud-actions">
+                    @Html.DisplayFor(modelItem => item.MechModel)
+                </td>
+                <td class="mech-crud-actions">
+                    @Html.DisplayFor(modelItem => item.MechName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tonnage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem=>item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { Id = item.Id }, new { @class = "mech-crud-actions" }) |
+                    @Html.ActionLink("Details", "Details", new { Id = item.Id }, new { @class = "mech-crud-actions" }) |
+                    @Html.ActionLink("Delete", "Delete", new { Id = item.Id }, new { @class = "mech-crud-actions" })
+
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>
+                <label>Total Mechs:</label>  @ViewBag.Mechs
+            </td>
+            <td>
+
+                @Html.ActionLink("Add", "Add")
+            </td>
+        </tr>
+    </table>
+</div>
