@@ -7,7 +7,7 @@
 
 <h2>Add</h2>
 
-@{ Html.EnableClientValidation(); }
+@{ Html.EnableClientValidation(true); }
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()

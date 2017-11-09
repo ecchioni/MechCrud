@@ -35,8 +35,7 @@ namespace MechCrud.Models
         public float Armor { get; set; }
         [XmlElement("Heatsinks")]
         [RegularExpression(@"[\d]")]
-        public int Heatsinks { get; set; }
-        [RegularExpression(@"[\d]")]
+        public int Heatsinks { get; set; }       
         [Range(20,100, ErrorMessage ="20 to 100 tonnes only!")]
         [XmlElement("Tonnage")]
         public int Tonnage { get; set; }
