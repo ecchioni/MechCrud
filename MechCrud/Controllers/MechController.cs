@@ -87,9 +87,12 @@ namespace MechCrud.Controllers
         [HttpPost]
         public ActionResult Add(BattleMech mech)
         {
-            mech.Id = result.Mechs.Count + 1;
-            result.Mechs.Add(mech);
-            this.SerializeList();
+            if (ModelState.IsValid)
+            {
+                mech.Id = result.Mechs.Count + 1;
+                result.Mechs.Add(mech);
+                this.SerializeList();
+            }
             return RedirectToAction("Index");
         }
         public ActionResult Edit(int id)
@@ -99,19 +102,22 @@ namespace MechCrud.Controllers
         }
         [HttpPost]
         public ActionResult Edit(BattleMech mech )
-        {  
-            BattleMech oldData = this.GetMech(mech.Id);
-            oldData.MechModel = mech.MechModel;
-            oldData.MechName = mech.MechName;
-            oldData.Price = mech.Price;
-            oldData.LA = mech.LA;
-            oldData.LT = mech.LT;
-            oldData.Heatsinks = mech.Heatsinks;
-            oldData.Head = mech.Head;
-            oldData.RA = mech.RA;
-            oldData.RT = mech.RT;
-            oldData.CT = mech.CT;
-            this.SerializeList();
+        {
+            if (ModelState.IsValid)
+            {
+                BattleMech oldData = this.GetMech(mech.Id);
+                oldData.MechModel = mech.MechModel;
+                oldData.MechName = mech.MechName;
+                oldData.Price = mech.Price;
+                oldData.LA = mech.LA;
+                oldData.LT = mech.LT;
+                oldData.Heatsinks = mech.Heatsinks;
+                oldData.Head = mech.Head;
+                oldData.RA = mech.RA;
+                oldData.RT = mech.RT;
+                oldData.CT = mech.CT;
+                this.SerializeList();
+            }
             return RedirectToAction("Index");
         }
         public ActionResult Details(int Id)

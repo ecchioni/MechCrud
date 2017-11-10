@@ -107,4 +107,17 @@
     <Heatsinks>15</Heatsinks>
     <Tonnage>65</Tonnage>
   </Mech>
+  <Mech>
+    <Id>9</Id>
+    <MechModel>VTR-9B</MechModel>
+    <MechName>Victor</MechName>
+    <Price>8044320</Price>
+    <LA>2ML</LA>
+    <RA>AC-20</RA>
+    <LT>SRM-4 SRM ammo</LT>
+    <RT>AC-20 ammo </RT>
+    <Armor>11.5</Armor>
+    <Heatsinks>15</Heatsinks>
+    <Tonnage>80</Tonnage>
+  </Mech>
 </MechList>
