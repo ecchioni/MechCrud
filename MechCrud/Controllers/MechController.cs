@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MechCrud.Models;
 using System.Xml.Serialization;
@@ -31,7 +30,7 @@ namespace MechCrud.Controllers
                     result = (MechList)serializer.Deserialize(fs);
                 }
             }
-            catch (Exception E)
+            catch (FileNotFoundException E)
             {
 
             }
@@ -140,10 +139,17 @@ namespace MechCrud.Controllers
         [NonAction]
         public void SerializeList()
         {
-            using (FileStream fs = new FileStream(Server.MapPath("~/Content/Data/MechList.xml"), FileMode.Create))
+            try
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(MechList));
-                serializer.Serialize(fs, result);
+                using (FileStream fs = new FileStream(Server.MapPath("~/Content/Data/MechList.xml"), FileMode.Create))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(MechList));
+                    serializer.Serialize(fs, result);
+                }
+            }
+            catch(FileNotFoundException FnF)
+            {
+                
             }
         }
     }
