@@ -42,32 +42,32 @@ namespace MechCrud.Controllers
 
             #region Sorting
                         
-            ViewBag.ModelSortParm = sortOrder == "MechModel" ? "model_desc" : "MechModel";
-            ViewBag.NameSortParm = sortOrder == "MechName" ? "name_desc" : "MechName";
-            ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price";
-            ViewBag.TonnageSortParm = sortOrder == "Tonnage" ? "tonnage_desc" : "Tonnage";
+            ViewBag.ModelSortParm = sortOrder == "mechmodel" ? "model_desc" : "mechmodel";
+            ViewBag.NameSortParm = sortOrder == "mechname" ? "name_desc" : "mechname";
+            ViewBag.PriceSortParm = sortOrder == "price" ? "price_desc" : "price";
+            ViewBag.TonnageSortParm = sortOrder == "tonnage" ? "tonnage_desc" : "tonnage";
            
             switch (sortOrder)
             {
                 case "model_desc":                       
                     result.Mechs = result.Mechs.OrderByDescending(m => m.MechModel).ToList();
                     break;
-                case "MechModel":
+                case "mechmodel":
                     result.Mechs = result.Mechs.OrderBy(m => m.MechModel).ToList();
                     break;                   
                 case "name_desc":   
                     result.Mechs = result.Mechs.OrderByDescending(m => m.MechName).ToList();
                     break;
-                case "MechName":                   
+                case "mechname":                   
                     result.Mechs = result.Mechs.OrderBy(m => m.MechName).ToList();
                     break;
-                case "Price":
+                case "price":
                     result.Mechs = result.Mechs.OrderBy(m => m.Price).ToList();
                     break;
                 case "price_desc":
                     result.Mechs = result.Mechs.OrderByDescending(m => m.Price).ToList();
                     break;
-                case "Tonnage":
+                case "tonnage":
                     result.Mechs = result.Mechs.OrderBy(m => m.Tonnage).ToList();
                     break;
                 case "tonnage_desc":
@@ -78,6 +78,7 @@ namespace MechCrud.Controllers
             ViewBag.Mechs = result.Mechs.Count;
             return View(result.Mechs);
         }
+        #region Add
         public ActionResult Add()
         {
             BattleMech mech = new BattleMech();
@@ -94,6 +95,8 @@ namespace MechCrud.Controllers
             }
             return RedirectToAction("Index");
         }
+        #endregion
+        #region Edit
         public ActionResult Edit(int id)
         {
             var mech = this.GetMech(id);
@@ -105,25 +108,29 @@ namespace MechCrud.Controllers
             if (ModelState.IsValid)
             {
                 BattleMech oldData = this.GetMech(mech.Id);
-                oldData.MechModel = mech.MechModel;
-                oldData.MechName = mech.MechName;
-                oldData.Price = mech.Price;
-                oldData.LA = mech.LA;
-                oldData.LT = mech.LT;
-                oldData.Heatsinks = mech.Heatsinks;
-                oldData.Head = mech.Head;
-                oldData.RA = mech.RA;
-                oldData.RT = mech.RT;
-                oldData.CT = mech.CT;
+                           oldData.MechModel = mech.MechModel;
+                           oldData.MechName = mech.MechName;
+                           oldData.Price = mech.Price;
+                           oldData.LA = mech.LA;
+                           oldData.LT = mech.LT;
+                           oldData.Heatsinks = mech.Heatsinks;
+                           oldData.Head = mech.Head;
+                           oldData.RA = mech.RA;
+                           oldData.RT = mech.RT;
+                           oldData.CT = mech.CT;
                 this.SerializeList();
             }
             return RedirectToAction("Index");
         }
+        #endregion
+        #region Details
         public ActionResult Details(int Id)
         {
             BattleMech mech = GetMech(Id);
             return View(mech);
         }
+        #endregion
+        #region Delete
         public ActionResult Delete(int Id)
         {
             BattleMech mech = GetMech(Id);
@@ -131,6 +138,8 @@ namespace MechCrud.Controllers
             this.SerializeList();
             return RedirectToAction("Index");
         }
+        #endregion
+        #region Helpers
         [NonAction]
         public BattleMech GetMech(int Id)
         {
@@ -152,5 +161,6 @@ namespace MechCrud.Controllers
                 
             }
         }
+        #endregion
     }
 }
