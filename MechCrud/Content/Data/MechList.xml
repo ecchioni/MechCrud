@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <MechList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Mech>
     <Id>1</Id>
@@ -42,30 +42,6 @@
     <Tonnage>50</Tonnage>
   </Mech>
   <Mech>
-    <Id>4</Id>
-    <MechModel>LCT-1V</MechModel>
-    <MechName>Locust</MechName>
-    <Price>1512400</Price>
-    <LA>MG</LA>
-    <RA>MG</RA>
-    <CT>ML MG-ammo</CT>
-    <Armor>4</Armor>
-    <Heatsinks>10</Heatsinks>
-    <Tonnage>20</Tonnage>
-  </Mech>
-  <Mech>
-    <Id>5</Id>
-    <MechModel>LCT-1M</MechModel>
-    <MechName>Locust</MechName>
-    <Price>1512400</Price>
-    <LA>LRM-5</LA>
-    <RA>LRM-5</RA>
-    <CT>LRM-5 ammo</CT>
-    <Armor>1</Armor>
-    <Heatsinks>10</Heatsinks>
-    <Tonnage>20</Tonnage>
-  </Mech>
-  <Mech>
     <Id>6</Id>
     <MechModel>HBK-4P</MechModel>
     <MechName>Hunchback</MechName>
@@ -106,18 +82,5 @@
     <Armor>10</Armor>
     <Heatsinks>15</Heatsinks>
     <Tonnage>65</Tonnage>
-  </Mech>
-  <Mech>
-    <Id>9</Id>
-    <MechModel>VTR-9B</MechModel>
-    <MechName>Victor</MechName>
-    <Price>8044320</Price>
-    <LA>2ML</LA>
-    <RA>AC-20</RA>
-    <LT>SRM-4 SRM ammo</LT>
-    <RT>AC-20 ammo </RT>
-    <Armor>11.5</Armor>
-    <Heatsinks>15</Heatsinks>
-    <Tonnage>80</Tonnage>
   </Mech>
 </MechList>

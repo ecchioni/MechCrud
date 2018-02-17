@@ -104,9 +104,7 @@ namespace MechCrud.Controllers
         }
         [HttpPost]
         public ActionResult Edit(BattleMech mech )
-        {
-            if (ModelState.IsValid)
-            {
+        {           
                 BattleMech oldData = this.GetMech(mech.Id);
                            oldData.MechModel = mech.MechModel;
                            oldData.MechName = mech.MechName;
@@ -119,7 +117,7 @@ namespace MechCrud.Controllers
                            oldData.RT = mech.RT;
                            oldData.CT = mech.CT;
                 this.SerializeList();
-            }
+           
             return RedirectToAction("Index");
         }
         #endregion
