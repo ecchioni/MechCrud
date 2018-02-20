@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <MechList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Mech>
     <Id>1</Id>
@@ -7,9 +7,9 @@
     <Price>9626000</Price>
     <LA>ML</LA>
     <RA>ML</RA>
-    <LT>LRM-20,SRM-6</LT>
-    <CT>ML ML SRM-ammo LRM-ammo AC-20-ammo</CT>
-    <RT>AC-20</RT>
+    <LT>SRM-6 LRM-20</LT>
+    <CT>2ML</CT>
+    <RT>AC/20</RT>
     <Armor>19</Armor>
     <Heatsinks>20</Heatsinks>
     <Tonnage>100</Tonnage>
@@ -42,7 +42,7 @@
     <Tonnage>50</Tonnage>
   </Mech>
   <Mech>
-    <Id>6</Id>
+    <Id>4</Id>
     <MechModel>HBK-4P</MechModel>
     <MechName>Hunchback</MechName>
     <Price>3467875</Price>
@@ -56,7 +56,7 @@
     <Tonnage>50</Tonnage>
   </Mech>
   <Mech>
-    <Id>7</Id>
+    <Id>5</Id>
     <MechModel>CPLT-C1</MechModel>
     <MechName>Catapult</MechName>
     <Price>5790125</Price>
@@ -70,7 +70,7 @@
     <Tonnage>65</Tonnage>
   </Mech>
   <Mech>
-    <Id>8</Id>
+    <Id>6</Id>
     <MechModel>CPLT-C4</MechModel>
     <MechName>Catapult</MechName>
     <Price>5790125</Price>
