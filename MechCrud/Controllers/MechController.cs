@@ -30,9 +30,10 @@ namespace MechCrud.Controllers
                     result = (MechList)serializer.Deserialize(fs);
                 }
             }
-            catch (FileNotFoundException E)
+            catch (FileNotFoundException FnF)
             {
-
+                Console.WriteLine("Back end file is not gone.");
+                Console.WriteLine(FnF.ToString());
             }
             if (!String.IsNullOrWhiteSpace(searchString))
             {
@@ -156,7 +157,8 @@ namespace MechCrud.Controllers
             }
             catch(FileNotFoundException FnF)
             {
-                
+                Console.WriteLine("Back end file is inaccesible");
+                Console.WriteLine(FnF.ToString());
             }
         }
         #endregion
