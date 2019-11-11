@@ -15,17 +15,32 @@
     <Tonnage>100</Tonnage>
   </Mech>
   <Mech>
-    <Id>2</Id>
-    <MechModel>SHD-2H</MechModel>
-    <MechName>ShadowHawk</MechName>
-    <Price>4539382</Price>
-    <RA>ML</RA>
-    <LT>AC-5 AC-5-ammo</LT>
-    <RT>LRM-5 LRM-5-ammo</RT>
-    <Head>SRM-2</Head>
-    <Armor>9.5</Armor>
-    <Heatsinks>12</Heatsinks>
-    <Tonnage>55</Tonnage>
+    <Id>5</Id>
+    <MechModel>CPLT-C1</MechModel>
+    <MechName>Catapult</MechName>
+    <Price>5790125</Price>
+    <LA>LRM-15</LA>
+    <RA>LRM-15</RA>
+    <LT>LRM-15 ammo ML</LT>
+    <CT>2ML</CT>
+    <RT>LRM-15 ammo ML</RT>
+    <Armor>10</Armor>
+    <Heatsinks>15</Heatsinks>
+    <Tonnage>65</Tonnage>
+  </Mech>
+  <Mech>
+    <Id>6</Id>
+    <MechModel>CPLT-C4</MechModel>
+    <MechName>Catapult</MechName>
+    <Price>5790125</Price>
+    <LA>LRM-20</LA>
+    <RA>LRM-20</RA>
+    <LT>LRM-ammo</LT>
+    <CT>2SL</CT>
+    <RT>LRM-ammo</RT>
+    <Armor>10</Armor>
+    <Heatsinks>15</Heatsinks>
+    <Tonnage>65</Tonnage>
   </Mech>
   <Mech>
     <Id>3</Id>
@@ -56,31 +71,16 @@
     <Tonnage>50</Tonnage>
   </Mech>
   <Mech>
-    <Id>5</Id>
-    <MechModel>CPLT-C1</MechModel>
-    <MechName>Catapult</MechName>
-    <Price>5790125</Price>
-    <LA>LRM-15</LA>
-    <RA>LRM-15</RA>
-    <LT>LRM-15 ammo ML</LT>
-    <CT>2ML</CT>
-    <RT>LRM-15 ammo ML</RT>
-    <Armor>10</Armor>
-    <Heatsinks>15</Heatsinks>
-    <Tonnage>65</Tonnage>
-  </Mech>
-  <Mech>
-    <Id>6</Id>
-    <MechModel>CPLT-C4</MechModel>
-    <MechName>Catapult</MechName>
-    <Price>5790125</Price>
-    <LA>LRM-20</LA>
-    <RA>LRM-20</RA>
-    <LT>LRM-ammo</LT>
-    <CT>2SL</CT>
-    <RT>LRM-ammo</RT>
-    <Armor>10</Armor>
-    <Heatsinks>15</Heatsinks>
-    <Tonnage>65</Tonnage>
+    <Id>2</Id>
+    <MechModel>SHD-2H</MechModel>
+    <MechName>ShadowHawk</MechName>
+    <Price>4539382</Price>
+    <RA>ML</RA>
+    <LT>AC-5 AC-5-ammo</LT>
+    <RT>LRM-5 LRM-5-ammo</RT>
+    <Head>SRM-2</Head>
+    <Armor>9.5</Armor>
+    <Heatsinks>12</Heatsinks>
+    <Tonnage>55</Tonnage>
   </Mech>
 </MechList>
